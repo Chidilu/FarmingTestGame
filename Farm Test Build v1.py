@@ -274,7 +274,6 @@ def handle_events(player, money):
                     return player.harvest_crop(grid)
     return 0
 
-
 player = Player()
 grid = [[Tile(row, col) for col in range(COLS)] for row in range(ROWS)]
 money_timer = 0
@@ -288,8 +287,8 @@ while True:
             tile.update()
     draw_grid(player)
     draw_sidebar(money, plantType[plantSelection])
-    piggy.draw()
-    piggy.check_collision(grid)
+    #piggy.draw()
+    #piggy.check_collision(grid)
     pygame.display.flip()
     clock.tick(30)
     money_timer += 1
